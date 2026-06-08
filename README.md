@@ -5,12 +5,11 @@ Custom [EdgeTX](https://edgetx.org/) content for [RadioMaster](https://www.radio
 ## What's here
 
 ```
-sounds/          Universal Y3K RC voice prompts — work on ANY RadioMaster + EdgeTX radio
-  inventory.md   The sound list (short name ↔ friendly name)
-models/          Per-controller model configs (hardware-specific)
-  mt12/          RadioMaster MT12
-docs/
-  naming-conventions.md   The z-prefix naming system + audio spec
+sounds/                  Universal Y3K RC voice prompts — work on ANY RadioMaster + EdgeTX radio
+  inventory.md           The sound list (short name ↔ friendly name)
+  naming-conventions.md  The z-prefix naming system + audio spec
+models/                  Per-controller model configs (hardware-specific)
+  mt12/                  RadioMaster MT12
 ```
 
 **Why the split?** A sound is just a `.wav` — it plays the same on any RadioMaster radio, so the sound pack is **universal**. Model files encode a radio's switches, mixes, and channels, so they're **specific to a controller**.
@@ -19,7 +18,7 @@ docs/
 
 1. Set up an EdgeTX SD card with [EdgeTX Buddy](https://buddy.edgetx.org/).
 2. Copy `sounds/*.wav` into your card's `SOUNDS/en/`.
-3. Assign them via Special/Global Functions — they all start with `z`, so they cluster at the bottom of the picker. See [`docs/naming-conventions.md`](docs/naming-conventions.md).
+3. Assign them via Special/Global Functions — they all start with `z`, so they cluster at the bottom of the picker. See [`sounds/naming-conventions.md`](sounds/naming-conventions.md).
 
 Every sound is EdgeTX-spec: **PCM 16-bit mono 32 kHz** (EdgeTX silently skips anything off-spec).
 

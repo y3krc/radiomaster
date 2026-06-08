@@ -2,7 +2,7 @@
 
 Current 6-char z-names and their friendly-name counterparts.
 
-The system, prefix grammar, audio spec, and add-a-sound workflow live in [`../docs/naming-conventions.md`](../docs/naming-conventions.md). This file is the live list that grows over time.
+The system, prefix grammar, audio spec, and add-a-sound workflow live in [`naming-conventions.md`](naming-conventions.md). This file is the live list that grows over time.
 
 ## Inventory
 
@@ -60,4 +60,4 @@ Sounds in this inventory that are candidates for `sdcard/SOUNDS/en/SYSTEM/` (rep
 - `inactiv.wav` (inactivity timeout): `zpd10m.wav` or `zunmna.wav`
 - `bye.wav` (radio shutdown): `zhttrl.wav` (as a sign-off)
 
-See [`../docs/naming-conventions.md`](../docs/naming-conventions.md) for the system-override mechanism details.
+See [`naming-conventions.md`](naming-conventions.md) for the system-override mechanism details.
