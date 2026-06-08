@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Y3K RC checkered-flag mark">
+  <defs>
+    <!-- The A3K magenta→cyan ramp -->
+    <linearGradient id="ramp" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0"   stop-color="#ff5fff"/>
+      <stop offset=".5"  stop-color="#af5fff"/>
+      <stop offset="1"   stop-color="#00ffff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="65%">
+      <stop offset="0"  stop-color="#1a1030"/>
+      <stop offset="1"  stop-color="#06060a"/>
+    </radialGradient>
+    <!-- A 2×2 checker tile filled with the ramp; alternate cells punched out by mask -->
+    <pattern id="check" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#000"/>
+      <rect width="8" height="8" fill="#fff"/>
+      <rect x="8" y="8" width="8" height="8" fill="#fff"/>
+    </pattern>
+    <mask id="checkmask">
+      <rect width="64" height="64" fill="url(#check)"/>
+    </mask>
+  </defs>
+
+  <!-- Clinical-black tile, A3K-style rounded cell -->
+  <rect x="2" y="2" width="60" height="60" rx="13" fill="url(#glow)"
+        stroke="#00d7ff" stroke-opacity=".45" stroke-width="2"/>
+
+  <!-- Flagpole -->
+  <rect x="21" y="14" width="3" height="38" rx="1.5" fill="#e8e8f4"/>
+  <circle cx="22.5" cy="14" r="2.6" fill="#ff5fff"/>
+
+  <!-- Checkered flag, sheared into a waving parallelogram, gradient-filled via the mask -->
+  <g transform="translate(32 32) skewX(-9) translate(-32 -32)">
+    <rect x="24" y="18" width="26" height="24" rx="2" fill="url(#ramp)" mask="url(#checkmask)"/>
+  </g>
+</svg>
