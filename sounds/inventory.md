@@ -45,7 +45,7 @@ The system, prefix grammar, audio spec, and add-a-sound workflow live in [`namin
 | `zy3krc.wav` | y3k_rc.wav | |
 | `zy3krm.wav` | power_on_y3k_rm.wav | |
 | `zy3etx.wav` | power_on_y3k_edgetx.wav | |
-| `zy3wrm.wav` | power_on_y3k_welcome_rm.wav | |
+| `zy3wrm.wav` | power_on_y3k_welcome_rm.wav | **Recommended** `hello.wav` boot sound (the Y3K welcome) |
 | `zmcraw.wav` | Crawl mode.mp3 | Mode-change announce: SA1 (mid) → Crawl |
 | `zmtral.wav` | Trail mode.mp3 | Mode-change announce: SA0 (up) → Trail |
 | `zmclmb.wav` | Climb mode.mp3 | Mode-change announce: SA2 (down) → Climb |
@@ -56,7 +56,7 @@ Total: 41 custom sounds.
 
 Sounds in this inventory that are candidates for `sdcard/SOUNDS/en/SYSTEM/` (replacing EdgeTX's built-in event sounds):
 
-- `hello.wav` (radio startup): `zy3wrm.wav` or `zpwron.wav`
+- `hello.wav` (radio startup): **`zy3wrm.wav`** (recommended — the Y3K welcome) or `zpwron.wav`
 - `inactiv.wav` (inactivity timeout): `zpd10m.wav` or `zunmna.wav`
 - `bye.wav` (radio shutdown): `zhttrl.wav` (as a sign-off)
 
