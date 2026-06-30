@@ -10,6 +10,7 @@ sounds/                  Universal Y3K RC voice prompts — work on ANY RadioMas
   naming-conventions.md  The z-prefix naming system + audio spec
 models/                  Per-controller model configs (hardware-specific)
   mt12/                  RadioMaster MT12
+  pocket/                RadioMaster Pocket
 ```
 
 **Why the split?** A sound is just a `.wav` — it plays the same on any RadioMaster radio, so the sound pack is **universal**. Model files encode a radio's switches, mixes, and channels, so they're **specific to a controller**.
@@ -29,7 +30,7 @@ Model files are per-radio. Grab yours from `models/<controller>/`:
 1. Copy the `.yml` into your card's `BACKUP/`.
 2. On the radio, restore it from the model-select menu (safer than dropping straight into `MODELS/`).
 
-Currently: **[`models/mt12/`](models/mt12/)** (RadioMaster MT12). More controllers as I set them up.
+Currently: **[`models/mt12/`](models/mt12/)** (RadioMaster MT12) and **[`models/pocket/`](models/pocket/)** (RadioMaster Pocket). More controllers as I set them up.
 
 ## Pick & choose
 
