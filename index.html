@@ -8,7 +8,7 @@
   — Sounds (universal z-named pack), Models (per-controller configs, /models/),
   and Schemes (control schemes, first entry /crab-fader/). Opens with the
   why-we-run-RadioMaster+ELRS prose, then flows into the cards; the whole-repo
-  pack download stays the hero action.
+  pack download follows the cards as the hero action.
 -->
 <html lang="en">
 <head>
@@ -486,12 +486,12 @@
     .eyebrow   { animation-delay: .04s; }
     .mark      { animation-delay: .10s; }
     .subtitle  { animation-delay: .18s; }
-    .actions   { animation-delay: .26s; }
-    .dl-meta   { animation-delay: .30s; }
-    .intro     { animation-delay: .38s; }
-    .card:nth-child(1) { animation-delay: .46s; }
-    .card:nth-child(2) { animation-delay: .52s; }
-    .card:nth-child(3) { animation-delay: .58s; }
+    .intro     { animation-delay: .26s; }
+    .card:nth-child(1) { animation-delay: .34s; }
+    .card:nth-child(2) { animation-delay: .40s; }
+    .card:nth-child(3) { animation-delay: .46s; }
+    .actions   { animation-delay: .54s; }
+    .dl-meta   { animation-delay: .58s; }
     .panel:nth-of-type(1) { animation-delay: .66s; }
     .panel:nth-of-type(2) { animation-delay: .74s; }
     footer     { animation-delay: .82s; }
@@ -533,16 +533,6 @@
 
     <p class="subtitle">Custom EdgeTX content for RadioMaster radios — a universal
       Y3K RC sound pack, per-controller model configs, and control schemes.</p>
-
-    <div class="actions">
-      <a class="download" href="https://github.com/y3krc/radiomaster/archive/refs/heads/main.zip">
-        <span class="arw">▼</span> Download the pack <span style="opacity:.7">(.zip)</span>
-      </a>
-      <a class="ghost" href="https://github.com/y3krc/radiomaster" target="_blank" rel="noopener noreferrer">
-        Browse on GitHub <span class="arw">→</span>
-      </a>
-    </div>
-    <p class="dl-meta">Whole-repo zip — always current <span class="sep">·</span> no build step <span class="sep">·</span> shared freely</p>
 
     <!-- Why — the hub opens with prose, then flows into the cards. -->
     <section class="intro" aria-labelledby="why-h">
@@ -586,6 +576,17 @@
         <span class="go">The Crab Fader <span class="arw">→</span></span>
       </a>
     </nav>
+
+    <!-- The hero action — grab everything, after the tour of what's in it. -->
+    <div class="actions">
+      <a class="download" href="https://github.com/y3krc/radiomaster/archive/refs/heads/main.zip">
+        <span class="arw">▼</span> Download the pack <span style="opacity:.7">(.zip)</span>
+      </a>
+      <a class="ghost" href="https://github.com/y3krc/radiomaster" target="_blank" rel="noopener noreferrer">
+        Browse on GitHub <span class="arw">→</span>
+      </a>
+    </div>
+    <p class="dl-meta">Whole-repo zip — always current <span class="sep">·</span> no build step <span class="sep">·</span> shared freely</p>
 
     <!-- Use the sounds — kept on the hub: the sound pack has no interior page. -->
     <section class="panel" style="--stop: var(--indigo);" aria-labelledby="sounds-h">
