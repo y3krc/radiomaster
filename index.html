@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <!--
-  RadioMaster · Y3K RC — the public pack's front door (radiomaster.y3krc.com).
+  RadioMaster · Y3K RC — the hub at radiomaster.y3krc.com.
   Self-contained, zero-dependency. Speaks A3K (the Y3K design language); the
   palette + CRT treatment + download idiom are inherited from the Y3K Lab hub
   and the Y3K RC hub, so this page reads as a clear sibling.
-  This is the GENERIC pack: a universal sound pack for any RadioMaster + EdgeTX
-  radio, plus per-controller model configs. Not MT12-specific.
+  Born as the pack's single landing page; now the front door to three sections
+  — Sounds (universal z-named pack), Models (per-controller configs, /models/),
+  and Schemes (control schemes, first entry /crab-fader/). Opens with the
+  why-we-run-RadioMaster+ELRS prose, then flows into the cards; the whole-repo
+  pack download stays the hero action.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RadioMaster — Y3K RC EdgeTX sounds &amp; model configs</title>
-<meta name="description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC voice-prompt sound pack plus per-controller model configs. Download the pack, or browse on GitHub.">
+<meta name="description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC voice-prompt sound pack, per-controller model configs, and control schemes like the Crab Fader. Download the pack, or browse on GitHub.">
 
 <!-- Favicon: the Y3K RC checkered-flag mark — shared with the hub for sibling consistency. -->
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -21,11 +24,11 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="RadioMaster — Y3K RC EdgeTX sounds &amp; model configs">
-<meta property="og:description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC sound pack plus per-controller model configs.">
+<meta property="og:description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC sound pack, per-controller model configs, and control schemes.">
 <meta property="og:url" content="https://radiomaster.y3krc.com">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RadioMaster — Y3K RC EdgeTX sounds &amp; model configs">
-<meta name="twitter:description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC sound pack plus per-controller model configs.">
+<meta name="twitter:description" content="Custom EdgeTX content for RadioMaster radios — a universal Y3K RC sound pack, per-controller model configs, and control schemes.">
 <meta name="theme-color" content="#0a0a12">
 <style>
   /* ── The palette: inherited verbatim from the Y3K hubs (ANSI-256 → hex). ──
@@ -263,6 +266,93 @@
   }
   .dl-meta .sep { color: color-mix(in srgb, var(--cyan) 60%, var(--rail)); }
 
+  /* ── Intro: why RadioMaster + ELRS — prose that flows into the cards.
+     Deliberately unboxed (the panel header idiom without the panel), so it
+     reads as the page talking, not another card. ── */
+  .intro { width: 100%; margin-top: 40px; }
+  .intro h2 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--cyan) 80%, var(--ink));
+    display: flex; align-items: center; gap: 12px;
+  }
+  .intro h2::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--cyan) 60%, transparent), transparent);
+    opacity: .6;
+  }
+  .intro p {
+    margin: 10px 0 0;
+    font-size: 14.5px; line-height: 1.65;
+    color: color-mix(in srgb, var(--ink) 84%, var(--dim));
+  }
+  .intro strong { color: var(--ink); }
+
+  /* ── Section cards: Sounds · Models · Schemes — the hub's doors.
+     Panel DNA (tint + rail + ramp-stepped spine), whole card is the link. ── */
+  .cards { width: 100%; display: grid; gap: 16px; margin-top: 26px; }
+  @media (min-width: 640px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  a.card {
+    position: relative;
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 20px 20px 18px 24px;
+    text-decoration: none;
+    background:
+      linear-gradient(150deg,
+        color-mix(in srgb, var(--stop, var(--accent)) 7%, transparent),
+        transparent 46%),
+      var(--panel);
+    border: 1px solid var(--rail);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .18s, border-color .18s, box-shadow .18s;
+  }
+  a.card::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
+    background: var(--stop, var(--accent));
+    opacity: .9;
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--stop, var(--accent)) 80%, var(--ink));
+    display: flex; align-items: center; gap: 12px;
+  }
+  .card h2::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(90deg,
+      color-mix(in srgb, var(--stop, var(--accent)) 60%, transparent), transparent);
+    opacity: .6;
+  }
+  .card p {
+    margin: 0;
+    font-size: 13.5px; line-height: 1.55;
+    color: color-mix(in srgb, var(--ink) 78%, var(--dim));
+  }
+  .card .go {
+    margin-top: auto; padding-top: 8px;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: .04em;
+    color: color-mix(in srgb, var(--stop, var(--accent)) 85%, var(--ink));
+  }
+  .card .go .arw { transition: transform .18s; display: inline-block; }
+  a.card:hover, a.card:focus-visible {
+    outline: none;
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--stop, var(--accent)) 45%, var(--rail));
+    box-shadow: 0 16px 40px -24px var(--stop, var(--accent));
+  }
+  a.card:focus-visible {
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--stop, var(--accent));
+  }
+  a.card:hover .go .arw, a.card:focus-visible .go .arw { transform: translateX(3px); }
+
   /* ── Panels: each section is a console card with a ramp-stepped left spine. ── */
   .panel {
     position: relative;
@@ -299,38 +389,7 @@
     opacity: .6;
   }
 
-  /* What's inside — two parts (Sounds / Models), each a sub-block. */
-  .parts { display: grid; gap: 18px; }
-  @media (min-width: 620px) { .parts { grid-template-columns: 1fr 1fr; gap: 22px; } }
-  .part h3 {
-    margin: 0 0 4px;
-    font-size: 15px; font-weight: 800; letter-spacing: .02em;
-    color: var(--ink);
-    display: flex; align-items: baseline; gap: 9px;
-  }
-  .part h3 .tag {
-    font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-    color: color-mix(in srgb, var(--p, var(--accent)) 82%, var(--ink));
-    border: 1px solid color-mix(in srgb, var(--p, var(--accent)) 38%, var(--rail));
-    border-radius: 999px; padding: 1px 8px;
-    background: color-mix(in srgb, var(--p, var(--accent)) 10%, transparent);
-  }
-  .part p {
-    margin: 6px 0 0; font-size: 13.5px; line-height: 1.55;
-    color: color-mix(in srgb, var(--ink) 78%, var(--dim));
-  }
-  .samples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 7px; }
-  .samples .chip {
-    font-size: 11.5px; letter-spacing: .02em;
-    color: color-mix(in srgb, var(--magenta) 72%, var(--ink));
-    border: 1px solid color-mix(in srgb, var(--magenta) 30%, var(--rail));
-    border-radius: 999px;
-    padding: 3px 11px;
-    background: color-mix(in srgb, var(--magenta) 7%, transparent);
-  }
-  .samples .chip::before { content: "\266A\00a0"; color: var(--rose); }
-
-  /* Steps — numbered, two flows share the styling. */
+  /* Steps — numbered. */
   .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
   .steps li {
     position: relative;
@@ -408,13 +467,13 @@
     .specs .key { min-width: 0; }
   }
   @media (hover: none) {
-    .download:hover, .ghost:hover { transform: none; }
+    .download:hover, .ghost:hover, a.card:hover { transform: none; }
   }
 
   /* ── Power-on load ── neon wordmark flicker on boot; panels + CTA cascade in.
      Opt-in via prefers-reduced-motion (the web analogue of "degrade off-TTY"). */
   @media (prefers-reduced-motion: no-preference) {
-    .eyebrow, .mark, .subtitle, .actions, .dl-meta, .panel, footer {
+    .eyebrow, .mark, .subtitle, .actions, .dl-meta, .intro, .card, .panel, footer {
       opacity: 0; animation: poweron .5s ease forwards;
     }
     .eyebrow   { animation-delay: .04s; }
@@ -422,11 +481,13 @@
     .subtitle  { animation-delay: .18s; }
     .actions   { animation-delay: .26s; }
     .dl-meta   { animation-delay: .30s; }
-    .panel:nth-of-type(1) { animation-delay: .36s; }
-    .panel:nth-of-type(2) { animation-delay: .44s; }
-    .panel:nth-of-type(3) { animation-delay: .52s; }
-    .panel:nth-of-type(4) { animation-delay: .60s; }
-    footer     { animation-delay: .68s; }
+    .intro     { animation-delay: .38s; }
+    .card:nth-child(1) { animation-delay: .46s; }
+    .card:nth-child(2) { animation-delay: .52s; }
+    .card:nth-child(3) { animation-delay: .58s; }
+    .panel:nth-of-type(1) { animation-delay: .66s; }
+    .panel:nth-of-type(2) { animation-delay: .74s; }
+    footer     { animation-delay: .82s; }
     @keyframes poweron { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
     /* Wordmark neon power-on — a quick stutter as the sign warms up. */
@@ -464,7 +525,7 @@
     </div>
 
     <p class="subtitle">Custom EdgeTX content for RadioMaster radios — a universal
-      Y3K RC sound pack + per-controller model configs.</p>
+      Y3K RC sound pack, per-controller model configs, and control schemes.</p>
 
     <div class="actions">
       <a class="download" href="https://github.com/y3krc/radiomaster/archive/refs/heads/main.zip">
@@ -476,38 +537,51 @@
     </div>
     <p class="dl-meta">Whole-repo zip — always current <span class="sep">·</span> no build step <span class="sep">·</span> shared freely</p>
 
-    <!-- What's inside — two parts -->
-    <section class="panel" style="--stop: var(--magenta);" aria-labelledby="inside-h">
-      <h2 id="inside-h">What's inside</h2>
-      <div class="parts">
-        <div class="part" style="--p: var(--magenta);">
-          <h3>Sounds <span class="tag">Universal</span></h3>
-          <p>41 Y3K RC voice prompts — z-named, EdgeTX-spec <strong>PCM 16-bit mono
-             32&nbsp;kHz</strong>. A sound is just a <code>.wav</code>, so it plays the
-             same on <em>any</em> RadioMaster + EdgeTX radio.</p>
-          <div class="samples" aria-label="Sample voice prompts">
-            <span class="chip">zy3k_rc</span>
-            <span class="chip">zcrawlers_roll_out</span>
-            <span class="chip">zhit_the_trail</span>
-            <span class="chip">zyou_got_this</span>
-          </div>
-        </div>
-        <div class="part" style="--p: var(--cyan);">
-          <h3>Models <span class="tag">Per-controller</span></h3>
-          <p>Per-radio <code>.yml</code> model configs — switches, mixes, and channels
-             encoded for a specific controller. Currently
-             <code>models/mt12/</code> (RadioMaster&nbsp;MT12) and
-             <code>models/pocket/</code> (RadioMaster&nbsp;Pocket); more
-             controllers as they're added.</p>
-          <p style="margin-top:10px;">★ Featured:
-             <a class="inline" href="crab-fader/">the <strong>Crab Fader</strong> —
-             dual-stick 4WS for crawlers, explained →</a></p>
-        </div>
-      </div>
+    <!-- Why — the hub opens with prose, then flows into the cards. -->
+    <section class="intro" aria-labelledby="why-h">
+      <h2 id="why-h">Why RadioMaster + ELRS</h2>
+      <p>Y3K RC runs RadioMaster because RadioMaster runs <strong>EdgeTX</strong> —
+         open-source firmware where the radio is something you program, not a menu
+         you're granted. Mixes compose: the Crab Fader below exists because EdgeTX
+         will happily sum a ratcheted axis into a steering channel, a trick no
+         menu-firmware radio can be talked into. <strong>ELRS</strong> is the same
+         philosophy on the RF side — an open-source link where one transmitter binds
+         the whole fleet, so the MT12 and the Pocket share a drawer of ER4-class PWM
+         receivers that swap between trucks in minutes.</p>
+      <p>And the hardware meets the firmware halfway: inexpensive to start,
+         upgradeable where it counts — CNC hall-effect gimbal sets drop straight in.
+         Open firmware, open RF, hardware that invites the screwdriver.
+         If It Moves, We Can Mod It.</p>
     </section>
 
-    <!-- Use the sounds -->
-    <section class="panel" style="--stop: var(--purple);" aria-labelledby="sounds-h">
+    <!-- The doors: Sounds · Models · Schemes -->
+    <nav class="cards" aria-label="Sections">
+      <a class="card" style="--stop: var(--magenta);"
+         href="https://github.com/y3krc/radiomaster/tree/main/sounds" target="_blank" rel="noopener noreferrer">
+        <h2>Sounds</h2>
+        <p>41 Y3K RC voice prompts — z-named, EdgeTX-spec PCM 16-bit mono
+           32&nbsp;kHz. A sound is just a <code>.wav</code>, so the pack is
+           universal: any RadioMaster + EdgeTX radio.</p>
+        <span class="go">Browse the sounds <span class="arw">→</span></span>
+      </a>
+      <a class="card" style="--stop: var(--cyan);" href="models/">
+        <h2>Models</h2>
+        <p>Per-controller <code>.yml</code> model configs — switches, mixes, and
+           channels encoded for a specific radio. RadioMaster MT12 and Pocket today;
+           more controllers as they're added.</p>
+        <span class="go">The model index <span class="arw">→</span></span>
+      </a>
+      <a class="card" style="--stop: var(--purple);" href="crab-fader/">
+        <h2>Schemes</h2>
+        <p>Control schemes, documented. First entry: the <strong>Crab Fader</strong> —
+           dual-stick 4WS for crawlers, with a hold-position crab stance on the
+           ratcheted axis.</p>
+        <span class="go">The Crab Fader <span class="arw">→</span></span>
+      </a>
+    </nav>
+
+    <!-- Use the sounds — kept on the hub: the sound pack has no interior page. -->
+    <section class="panel" style="--stop: var(--indigo);" aria-labelledby="sounds-h">
       <h2 id="sounds-h">Use the sounds <span style="font-weight:500;letter-spacing:.04em;text-transform:none;color:var(--dim);font-size:.85em">— any RadioMaster + EdgeTX</span></h2>
       <ol class="steps">
         <li>Start from an EdgeTX SD card — set one up with
@@ -515,17 +589,6 @@
         <li>Copy <code>sounds/*.wav</code> into the card's <code>SOUNDS/en/</code>.</li>
         <li>Assign via Special / Global Functions — they all start with <code>z</code>,
           so they cluster at the bottom of the picker.</li>
-      </ol>
-    </section>
-
-    <!-- Use a model -->
-    <section class="panel" style="--stop: var(--indigo);" aria-labelledby="model-h">
-      <h2 id="model-h">Use a model <span style="font-weight:500;letter-spacing:.04em;text-transform:none;color:var(--dim);font-size:.85em">— your specific controller</span></h2>
-      <ol class="steps">
-        <li>Grab the <code>.yml</code> for your radio from <code>models/&lt;controller&gt;/</code>.</li>
-        <li>Copy it into the card's <code>BACKUP/</code>.</li>
-        <li>On the radio, restore it from the model-select menu — safer than dropping
-          straight into <code>MODELS/</code>.</li>
       </ol>
     </section>
 
