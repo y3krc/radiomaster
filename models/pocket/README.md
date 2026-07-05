@@ -1,6 +1,6 @@
 # RadioMaster Pocket — models
 
-Model configs for the [RadioMaster Pocket](https://www.radiomasterrc.com/) (internal 4-in-1 multiprotocol / CC2500) running EdgeTX 2.12.2.
+Model configs for the [RadioMaster Pocket](https://www.radiomasterrc.com/) (internal **ELRS**) running EdgeTX 2.12.2.
 
 | File | Model | Notes |
 |---|---|---|
@@ -10,6 +10,7 @@ Model configs for the [RadioMaster Pocket](https://www.radiomasterrc.com/) (inte
 | `model03.yml` | HELI | |
 | `model04.yml` | SuperSPrnt | |
 | `model05.yml` | AIR | |
+| `model06.yml` | **Titan24** | Dual-stick 4WS crawler w/ the **[Crab Fader](https://radiomaster.y3krc.com/crab-fader/)** — front steer + throttle on the right stick, rear steer + hold-position crab stance on the left |
 
 ## Install
 
@@ -18,4 +19,4 @@ Model configs for the [RadioMaster Pocket](https://www.radiomasterrc.com/) (inte
 
 > These are **Pocket-specific** (switch map, channel setup) — they won't map cleanly to other RadioMaster radios. The [sounds](../../sounds/) are universal, though.
 
-**Binding:** the Pocket drives its internal 4-in-1 multiprotocol module, so bind data isn't stored in the model file — these `.yml` are bind-phrase-free, and you'll bind your own receivers.
+**Binding:** the Pocket's internal ELRS module keeps bind data in module flash, so bind data isn't stored in the model file — these `.yml` are bind-phrase-free, and you'll bind your own receivers via the ELRS Lua tool.
