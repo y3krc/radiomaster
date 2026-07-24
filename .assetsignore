@@ -1,0 +1,5 @@
+# Cloudflare publishes this repo ROOT, so the build container's own checkout is
+# web-reachable unless excluded here. Without this, .git/config, .git/HEAD and
+# .git/logs/HEAD were served publicly (found 2026-07-24).
+.git
+.gitignore
